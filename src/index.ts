@@ -4,7 +4,7 @@ import { jwt } from "@elysiajs/jwt";
 import { staticPlugin } from "@elysiajs/static";
 import { swagger } from "@elysiajs/swagger";
 
-import knex from "./knex.config/db.setup";
+import knex from "./db.setup";
 
 import { itemsRoute } from "./routers/items";
 
@@ -48,7 +48,7 @@ const app = new Elysia()
       .use(itemsRoute)
       // and other controllers
   );
-  app.get("/", () => "Hello Elysia");
+  app.get("/", () => "RESTFul by Elysia");
   app.listen(3000);
 
 console.log(
